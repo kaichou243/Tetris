@@ -1,10 +1,9 @@
-
-# include <Siv3D.hpp> // OpenSiv3D v0.4.3
-#include "CurrentMino.h"
-#include "Field.h"
-#include "Mino.h"
-#include "NextMino.h"
-#include "Player.h"
+# include <Siv3D.hpp> // OpenSiv3D v0.6.1
+#include "CurrentMino.hpp"
+#include "Field.hpp"
+#include "Mino.hpp"
+#include "NextMino.hpp"
+#include "Player.hpp"
 short Init[100][100];//仮 後で要修正
 
 void game(){
@@ -16,7 +15,7 @@ void game(){
     Stopwatch time;
     time.start();
     const Audio audio(U"example/bgm.m4a");
-    const Audio bgm(Resource(U"example/bgm.m4a"), Arg::loop = true);
+    const Audio bgm(Audio::Stream,U"example/bgm.m4a", Loop::Yes);
     bgm.play();
     while (System::Update())
     {
@@ -101,7 +100,7 @@ void game(){
 
 void Main()
 {
-    (void) Window::SetFullscreen(true, Graphics::GetFullscreenResolutions().back());
+    Window::SetFullscreen(true);
     Scene::SetBackground(Palette::Black);
     while(System::Update()){
         bool outer_break = false;
