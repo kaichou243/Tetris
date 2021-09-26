@@ -1,5 +1,5 @@
 #include "Siv3D.hpp"
-#include "Player.h"
+#include "Player.hpp"
 
 Vec2 Player::InputKey() {
 	int dx = 0, dy = 0;
