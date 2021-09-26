@@ -1,6 +1,6 @@
 #pragma once
 #include "Siv3D.hpp"
-#include "CurrentMino.h"
+#include "CurrentMino.hpp"
 
 class Player {
 public:
