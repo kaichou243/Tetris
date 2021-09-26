@@ -1,5 +1,5 @@
 #include "Siv3D.hpp"
-#include "Mino.h"
+#include "Mino.hpp"
 
 void Mino::DrowMino() {
 	return;
