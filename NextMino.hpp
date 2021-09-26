@@ -1,5 +1,5 @@
 #pragma once
-#include "Mino.h"
+#include "Mino.hpp"
 
 class NextMino : public Mino {
 public:
